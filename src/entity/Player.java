@@ -41,8 +41,8 @@ public class Player extends Entity {
     }
 
     public void update() {
-        if (keyI.upPressed == true || keyI.downPressed == true ||
-                keyI.leftPressed == true || keyI.rightPressed == true) {
+        if (keyI.upPressed || keyI.downPressed ||
+                keyI.leftPressed || keyI.rightPressed) {
 
             if (keyI.upPressed) {
                 direction = "up";
@@ -59,7 +59,7 @@ public class Player extends Entity {
             }
 
             spriteCounter++;
-            if (spriteCounter > 10) {
+            if (spriteCounter > 12) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
                 } else if (spriteNum == 2) {
