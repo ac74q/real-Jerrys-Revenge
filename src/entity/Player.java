@@ -9,18 +9,23 @@ import java.io.IOException;
 public class Player extends Entity {
     GamePanel gp;
     KeyInput keyI;
+    public final int screenX;
+    public final int screenY;
 
     public Player(GamePanel gp, KeyInput keyI) {
         this.gp = gp;
         this.keyI = keyI;
+
+        screenX = gp.screenWidth / 2 - gp.tileSize / 2;
+        screenY = gp.screenHeight / 2 - gp.tileSize / 2;
 
         setDefaultValues();
         getPlayerImage();
     }
 
     public void setDefaultValues() {
-        x = 100;
-        y = 100;
+        worldX = gp.tileSize * 24;
+        worldY = gp.tileSize * 24;
         speed = 3;
         direction = "down";
     }
@@ -46,16 +51,16 @@ public class Player extends Entity {
 
             if (keyI.upPressed) {
                 direction = "up";
-                y -= speed;
+                worldY -= speed;
             } else if (keyI.downPressed) {
                 direction = "down";
-                y += speed;
+                worldY += speed;
             } else if (keyI.leftPressed) {
                 direction = "left";
-                x -= speed;
+                worldX -= speed;
             } else if (keyI.rightPressed) {
                 direction = "right";
-                x += speed;
+                worldX += speed;
             }
 
             spriteCounter++;
@@ -103,10 +108,6 @@ public class Player extends Entity {
                 image = right2;
             }
         }
-        g2D.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        g2D.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }
-
 }
-
-
-
