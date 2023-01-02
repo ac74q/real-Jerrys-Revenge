@@ -11,8 +11,7 @@ public class Entity {
 
     public int spriteCounter = 0;
     public int spriteNum = 1;
-    public Rectangle solidArea; // area of tom that collides w/ solids
+    public Rectangle solidArea; // area of entity that collides w/ solids
     public boolean collisionOn = false; // if colliding
-
 
 }

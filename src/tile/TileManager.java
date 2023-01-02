@@ -38,8 +38,8 @@ public class TileManager {
             tile[3].collision = true;
 
             tile[4] = new Tile();
-            tile[4].collision = true;
             tile[4].image = ImageIO.read(getClass().getResourceAsStream("/tiles/brick-wall-pixilart.png/"));
+            tile[4].collision = true;
 
             tile[5] = new Tile();
             tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/stone-wall-pixilart.png/"));

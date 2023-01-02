@@ -39,15 +39,15 @@ public class CollisionChecker {
             }
         } else if (entity.direction == "left") {
             entityLeftCol = (entityLeftWorld - entity.speed) / gp.tileSize;
-            tileNum1 = gp.tileM.mapTileNum[entityTopRow][entityLeftCol];
-            tileNum2 = gp.tileM.mapTileNum[entityBottomRow][entityLeftCol];
+            tileNum1 = gp.tileM.mapTileNum[entityLeftCol][entityTopRow];
+            tileNum2 = gp.tileM.mapTileNum[entityLeftCol][entityBottomRow];
             if (gp.tileM.tile[tileNum1].collision || gp.tileM.tile[tileNum2].collision) {
                 entity.collisionOn = true;
             }
         } else if (entity.direction == "right") {
             entityRightCol = (entityRightWorld + entity.speed) / gp.tileSize;
-            tileNum1 = gp.tileM.mapTileNum[entityTopRow][entityRightCol];
-            tileNum2 = gp.tileM.mapTileNum[entityBottomRow][entityRightCol];
+            tileNum1 = gp.tileM.mapTileNum[entityRightCol][entityTopRow];
+            tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityBottomRow];
             if (gp.tileM.tile[tileNum1].collision || gp.tileM.tile[tileNum2].collision) {
                 entity.collisionOn = true;
             }

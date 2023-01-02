@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5f1e1bf-df64-40c0-b71b-adb6d4fe30b1" name="Changes" comment="Started working on world map&#10;Adjusted camera view so world moves relative to Tom">
-      <change afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
+    <list default="true" id="a5f1e1bf-df64-40c0-b71b-adb6d4fe30b1" name="Changes" comment="Added collision detector - it's a bit buggy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/worldMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/worldMap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +87,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669421993185</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added collision detector - it's a bit buggy">
+      <created>1672691812402</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672691812402</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added collision detector - it's a bit buggy">
+      <created>1672691970203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672691970203</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added collision detector - it's a bit buggy">
+      <created>1672692004426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672692004426</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created test map background.&#10;Added dirt, path, and tree tiles." />
     <MESSAGE value="Started working on world map&#10;Adjusted camera view so world moves relative to Tom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started working on world map&#10;Adjusted camera view so world moves relative to Tom" />
+    <MESSAGE value="Added collision detector - it's a bit buggy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added collision detector - it's a bit buggy" />
   </component>
 </project>
