@@ -19,6 +19,8 @@ public class Player extends Entity {
         screenX = gp.screenWidth / 2 - gp.tileSize / 2;
         screenY = gp.screenHeight / 2 - gp.tileSize / 2;
 
+        solidArea = new Rectangle(16 , 16, 32, 32); // collision parameters
+
         setDefaultValues();
         getPlayerImage();
     }
@@ -51,16 +53,29 @@ public class Player extends Entity {
 
             if (keyI.upPressed) {
                 direction = "up";
-                worldY -= speed;
             } else if (keyI.downPressed) {
                 direction = "down";
-                worldY += speed;
             } else if (keyI.leftPressed) {
                 direction = "left";
-                worldX -= speed;
             } else if (keyI.rightPressed) {
                 direction = "right";
-                worldX += speed;
+            }
+
+            // check tile collision
+            collisionOn = false;
+            gp.collisionChecker.checkTile(this);
+
+            // if collision is false, player can move
+            if (!collisionOn) {
+                if (direction == "up") {
+                    worldY -= speed; // world moves, makes it look like tom is
+                } else if (direction == "down") {
+                    worldY += speed;
+                } else if (direction == "left") {
+                    worldX -= speed;
+                } else if (direction == "right") {
+                    worldX += speed;
+                }
             }
 
             spriteCounter++;
