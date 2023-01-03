@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5f1e1bf-df64-40c0-b71b-adb6d4fe30b1" name="Changes" comment="Fixed the collision detector&#10;Changed world map to test collision">
-      <change afterPath="$PROJECT_DIR$/res/objects/chest-pixilart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/door-pixilart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/key-pixilart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ObjectSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+    <list default="true" id="a5f1e1bf-df64-40c0-b71b-adb6d4fe30b1" name="Changes" comment="Added 3 objects&#10;Put 2 keys into the game">
+      <change afterPath="$PROJECT_DIR$/res/objects/star-pixilart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/Chest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/Door.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/Star.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/entity/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/entity/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/main/CollisionChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/main/CollisionChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/main/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/main/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/maps/worldMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/real-Jerrys-Revenge/maps/worldMap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/worldMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/worldMap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ObjectSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ObjectSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672700507657</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added 3 objects&#10;Put 2 keys into the game">
+      <created>1672707896361</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672707896361</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +163,7 @@
     <MESSAGE value="Started working on world map&#10;Adjusted camera view so world moves relative to Tom" />
     <MESSAGE value="Added collision detector - it's a bit buggy" />
     <MESSAGE value="Fixed the collision detector&#10;Changed world map to test collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the collision detector&#10;Changed world map to test collision" />
+    <MESSAGE value="Added 3 objects&#10;Put 2 keys into the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 3 objects&#10;Put 2 keys into the game" />
   </component>
 </project>

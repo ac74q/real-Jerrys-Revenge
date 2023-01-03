@@ -62,9 +62,9 @@ public class GamePanel extends JPanel implements Runnable {
 
             try {
                 double remainingTime = nextDrawTime - System.nanoTime();
-                remainingTime = remainingTime/1000000;
+                remainingTime = remainingTime / 1000000;
 
-                if(remainingTime < 0) {
+                if (remainingTime < 0) {
                     remainingTime = 0;
                 }
 
@@ -86,11 +86,13 @@ public class GamePanel extends JPanel implements Runnable {
         Graphics2D g2D = (Graphics2D)g;
 
         tileM.draw(g2D);
+
         for (int i = 0; i < object.length; i++) {
             if (object[i] != null) {
                 object[i].draw(g2D, this);
             }
         }
+
         player.draw(g2D);
 
         g2D.dispose();

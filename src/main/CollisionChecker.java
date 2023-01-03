@@ -22,7 +22,6 @@ public class CollisionChecker {
 
         int tileNum1, tileNum2; // the 2 possible tiles that entity can hit
 
-        // this is the ugliest if statement i've seen in my life
         if (entity.direction == "up") {
             entityTopRow = (entityTopWorld - entity.speed) / gp.tileSize; // predict where entity is after it moves
             tileNum1 = gp.tileM.mapTileNum[entityLeftCol][entityTopRow]; // top left tile
@@ -52,5 +51,69 @@ public class CollisionChecker {
                 entity.collisionOn = true;
             }
         }
+    }
+
+    public int checkObject(Entity entity, boolean player) {
+        int index = 999;
+
+        for (int i = 0; i < gp.object.length; i++) {
+            if (gp.object[i] != null) {
+                // get entity's solid area position
+                entity.solidArea.x = entity.worldX + entity.solidArea.x;
+                entity.solidArea.y = entity.worldY + entity.solidArea.y;
+                // get object's solid area position
+                gp.object[i].solidArea.x = gp.object[i].worldX + gp.object[i].solidArea.x;
+                gp.object[i].solidArea.y = gp.object[i].worldY + gp.object[i].solidArea.y;
+
+                if (entity.direction == "up") {
+                    entity.solidArea.y -= entity.speed; // predict location after movement
+                    if (entity.solidArea.intersects(gp.object[i].solidArea)) {
+                        if (gp.object[i].collision) {
+                            entity.collisionOn = true;
+                        }
+                        if (player) {
+                            index = i;
+                        }
+                    }
+                } else if (entity.direction == "down") {
+                    entity.solidArea.y += entity.speed;
+                    if (entity.solidArea.intersects(gp.object[i].solidArea)) {
+                        if (gp.object[i].collision) {
+                            entity.collisionOn = true;
+                        }
+                        if (player) {
+                            index = i;
+                        }
+                    }
+                } else if (entity.direction == "left") {
+                    entity.solidArea.x -= entity.speed;
+                    if (entity.solidArea.intersects(gp.object[i].solidArea)) {
+                        if (gp.object[i].collision) {
+                            entity.collisionOn = true;
+                        }
+                        if (player) {
+                            index = i;
+                        }
+                    }
+                } else if (entity.direction == "right") {
+                    entity.solidArea.x += entity.speed;
+                    if (entity.solidArea.intersects(gp.object[i].solidArea)) {
+                        if (gp.object[i].collision) {
+                            entity.collisionOn = true;
+                        }
+                        if (player) {
+                            index = i;
+                        }
+                    }
+                }
+                entity.solidArea.x = entity.solidAreaDefaultX;
+                entity.solidArea.y = entity.solidAreaDefaultY;
+                gp.object[i].solidArea.x = gp.object[i].solidAreaDefaultX;
+                gp.object[i].solidArea.y = gp.object[i].solidAreaDefaultY;
+            }
+        }
+
+        return index;
+        // if tom is hitting any objects, return the object's index
     }
 }

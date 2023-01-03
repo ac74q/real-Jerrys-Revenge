@@ -1,6 +1,9 @@
 package main;
 
+import object.Chest;
+import object.Door;
 import object.Key;
+import object.Star;
 
 public class ObjectSetter {
     GamePanel gp;
@@ -14,8 +17,13 @@ public class ObjectSetter {
         gp.object[0].worldX = 25 * gp.tileSize;
         gp.object[0].worldY = 25 * gp.tileSize;
 
-        gp.object[1] = new Key();
-        gp.object[1].worldX = 40 * gp.tileSize;
-        gp.object[1].worldY = 30  * gp.tileSize;
+        gp.object[1] = new Star();
+        gp.object[1].worldX = 28 * gp.tileSize;
+        gp.object[1].worldY = 27 * gp.tileSize;
+
+        gp.object[2] = new Door();
+        gp.object[2].worldX = 28 * gp.tileSize;
+        gp.object[2].worldY = 28 * gp.tileSize;
+
     }
 }

@@ -11,6 +11,8 @@ public class Player extends Entity {
     KeyInput keyI;
     public final int screenX;
     public final int screenY;
+    int hasKey = 0;
+    boolean hasPowerup = false;
 
     public Player(GamePanel gp, KeyInput keyI) {
         this.gp = gp;
@@ -20,6 +22,8 @@ public class Player extends Entity {
         screenY = gp.screenHeight / 2 - gp.tileSize / 2;
 
         solidArea = new Rectangle(18, 18, 15, 30); // times scale of 3
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
 
         setDefaultValues();
         getPlayerImage();
@@ -51,6 +55,7 @@ public class Player extends Entity {
         if (keyI.upPressed || keyI.downPressed ||
                 keyI.leftPressed || keyI.rightPressed) {
 
+            // assign direction
             if (keyI.upPressed) {
                 direction = "up";
             } else if (keyI.downPressed) {
@@ -61,12 +66,19 @@ public class Player extends Entity {
                 direction = "right";
             }
 
-            // check tile collision
+            // check collision
             collisionOn = false;
             gp.collisionChecker.checkTile(this);
+            int objectIndex = gp.collisionChecker.checkObject(this, true);
+            pickUpObject(objectIndex);
 
             // if collision is false, player can move
             if (!collisionOn) {
+                if (hasPowerup && keyI.shiftHeld) {
+                   speed = 5;
+                } else {
+                    speed = 3;
+                }
                 if (direction == "up") {
                     worldY -= speed; // world moves, makes it look like tom is
                 } else if (direction == "down") {
@@ -87,6 +99,24 @@ public class Player extends Entity {
                 }
                 spriteCounter = 0;
             }
+        }
+    }
+
+    public void pickUpObject(int i) {
+        if (i != 999) { // 999 is default index
+           String objectName = gp.object[i].name;
+           if (objectName == "Key") {
+               hasKey++;
+               gp.object[i] = null;
+           } else if (objectName == "Door") {
+               if (hasKey > 0) {
+                   gp.object[i] = null;
+                   hasKey--;
+               }
+           } else if (objectName == "Star") {
+               hasPowerup = true;
+               gp.object[i] = null;
+           }
         }
     }
 
